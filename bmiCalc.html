@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="app.css">
+    <title>BMI Calculator</title>
+</head>
+
+<body>
+    <div class="conatiner">
+        <section class="hero is-medium is-link has-text-centered">
+            <div class="hero-body">
+                <p class="title is-4 pb-2">
+                    BMI Calculator
+                </p>
+                <p class="subtitle">
+                    Please write down your information
+                </p>
+            </div>
+        </section>
+    </div>
+    <form class="form" id="form">
+    <div class="container pt-4">
+        <div class="columns">
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title is-4">
+                            Choose Gender
+                        </p>
+                        <label class="radio">
+                            <input id="maleInput" type="radio" name="gender" >
+                            Male
+                        </label><br>
+                        <label class="radio">
+                            <input id="femaleInput" type="radio" name="gender" >
+                            Female
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card pb-2">
+                    <div class="card-content">
+                        <p class="title is-4">
+                            Height(cm)
+                        </p>
+                        <input id="heightInput" class="input is-rounded" type="number" placeholder="Write height">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card pb-2">
+                    <div class="card-content">
+                        <p class="title is-4">
+                            Weight(kg)
+                        </p>
+                        <input id="weightInput" class="input is-rounded" type="number" placeholder="Write weight">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card pb-2">
+                    <div class="card-content">
+                        <p class="title is-4">
+                            Age
+                        </p>
+                        <input id="ageInput" class="input is-rounded" type="number" placeholder="Write age">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns pt-3">
+            <div class="column">
+                <button id="resultsButton" class="button is-link is-fullwidth is-rounded">Show results</button>
+            </div>
+        </div>
+    </div>
+
+    <span class="heat-slider--input">
+		<input type="range" value="0" min="14.9899999999" max="32"/>
+	</span>
+
+    <script src="app.js"></script>
+</form>
+</body>
+</html>
