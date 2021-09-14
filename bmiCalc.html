@@ -30,10 +30,10 @@
                 <div class="card">
                     <div class="card-content">
                         <p class="title is-4">
-                            Choose Gender
+                            Gender
                         </p>
                         <label class="radio">
-                            <input id="maleInput" type="radio" name="gender" >
+                            <input id="maleInput" type="radio" name="gender" checked >
                             Male
                         </label><br>
                         <label class="radio">
@@ -50,7 +50,7 @@
                         <p class="title is-4">
                             Height(cm)
                         </p>
-                        <input id="heightInput" class="input is-rounded" type="number" placeholder="Write height">
+                        <input id="height" value="174" class="input is-rounded" type="number" placeholder="Write height" onchange=showResults()>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                         <p class="title is-4">
                             Weight(kg)
                         </p>
-                        <input id="weightInput" class="input is-rounded" type="number" placeholder="Write weight">
+                        <input id="weight" value="71" class="input is-rounded" type="number" max="120" placeholder="Write weight" oninput=slider.value=value;showResults()>
                     </div>
                 </div>
             </div>
@@ -72,23 +72,29 @@
                         <p class="title is-4">
                             Age
                         </p>
-                        <input id="ageInput" class="input is-rounded" type="number" placeholder="Write age">
+                        <input id="age" value="25" class="input is-rounded" type="number" placeholder="Write age">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="columns pt-3">
-            <div class="column">
-                <button id="resultsButton" class="button is-link is-fullwidth is-rounded">Show results</button>
+        
+<!-- <input type="range" value="" step="0.1" id="slider" min="14.989" max="32" oninput=weight.value=value;showResults()> -->
+        <div class="columns is-mobile pt-4">
+            <div class="column is-11 is-offset-one-quarter">
+                <div>
+                    <input id="slider" class="slider" type="range" min="14" max="120" oninput=weight.value=value;showResults()>
+                </div>
+                
             </div>
         </div>
+        <output></output>
+<!-- <button id="resultsButton" class="button is-link is-fullwidth is-rounded">Show results</button> -->
+         
     </div>
 
-    <span class="heat-slider--input">
-		<input type="range" value="0" min="14.9899999999" max="32"/>
-	</span>
+    
 
     <script src="app.js"></script>
 </form>
